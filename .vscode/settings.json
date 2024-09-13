@@ -1,0 +1,5 @@
+{
+    "editor.guides.bracketPairs": "active",
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+    "notebook.defaultFormatter": "esbenp.prettier-vscode"
+}
