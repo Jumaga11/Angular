@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AddCharacterComponent {
 
+  public character : Character = {
+    name  : '',
+    power : 0
+  };
+
 }

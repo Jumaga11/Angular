@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { Component } from '@angular/core';
 import { Character } from '../interfaces/character.interface';
 
 
@@ -13,8 +13,11 @@ export class MainPageComponent {
     name  : 'krilin',
     power : 1000
   },{
-    name  : 'gpkú',
+    name  : 'gokú',
     power : 1000
+  },{
+    name  : 'vegueta',
+    power : 9500
   }];
 
 }
