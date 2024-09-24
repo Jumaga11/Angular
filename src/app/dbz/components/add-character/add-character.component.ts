@@ -7,9 +7,10 @@ import { Character } from '../../interfaces/character.interface';
   styleUrl: './add-character.component.css',
 })
 export class AddCharacterComponent {
+
   @Output()
   onNewCharacter: EventEmitter<Character> = new EventEmitter();
-
+  
   public character: Character = {
     name: '',
     power: 0,

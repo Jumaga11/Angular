@@ -4,28 +4,37 @@ import { v4 as uuid } from 'uuid';
 import { Character } from '../interfaces/character.interface';
 
 @Injectable({ providedIn: 'root' })
-
 export class DbzService {
+  public characters: Character[] = [
+    {
+      id: uuid(),
+      name: 'krilin',
+      power: 1000,
+    },
+    {
+      id: uuid(),
+      name: 'gokú',
+      power: 1000,
+    },
+    {
+      id: uuid(),
+      name: 'vegueta',
+      power: 9500,
+    },
+  ];
 
-  public characters : Character [] = [{
-    id    : uuid(),
-    name  : 'krilin',
-    power : 1000
-  },{
-    id    : uuid(),
-    name  : 'gokú',
-    power : 1000
-  },{
-    id    : uuid(),
-    name  : 'vegueta',
-    power : 9500
-  }];
-
-  onNewCharacter( character:Character ):void {
+  addCharacter( character:Character ): void {
+    const newCharacter: Character = { id: uuid(), ...character };
     this.characters.push(character);
   }
 
-  onDeleteCharacter( index:number ) {
-    this.characters.splice(index,1);
+  /*   onDeleteCharacter( index:number ) {
+      this.characters.splice(index,1);
+  }*/
+
+  deleteCharacterById( id:string ) {
+    this.characters = this.characters.filter(
+      (character) => character.id !== id
+    );
   }
 }
